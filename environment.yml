@@ -1,0 +1,16 @@
+name: bench-playground
+channels:
+  - conda-forge
+dependencies:
+  - python==3.12
+  - numpy
+  - cupy
+  - pytorch
+  - mkl
+  - pytest
+  - ipython
+  - array-api-compat
+  # Can't install jax from conda-forge?
+  #- jax[cuda12]
+  # pip install jax[cuda12]
+  # pip istall pytest-benchmark
