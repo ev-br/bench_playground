@@ -1,28 +1,30 @@
 import functools
-
-try:
-    import jax
-    HAVE_JAX = True
-except ImportError:
-    HAVE_JAX = False
-
-try:
-    import torch
-    HAVE_TORCH = True
-except ImportError:
-    HAVE_TORCH = False
-
-try:
-    import cupy
-    HAVE_CUPY = True
-except ImportError:
-    HAVE_CUPY = False
+import importlib
 
 from array_api_compat import (
     is_jax_namespace as is_jax,
     is_torch_namespace as is_torch,
     is_cupy_namespace as is_cupy
 )
+
+
+def try_import(name: str):
+    """Import a module if available."""
+    try:
+        module = importlib.import_module(name)
+    except ImportError:
+        module = None
+    return module
+
+# import available Array API backends
+jax = try_import("jax")
+torch = try_import("torch")
+cupy = try_import("cupy")
+
+
+HAVE_JAX = jax is not None
+HAVE_TORCH = torch is not None
+HAVE_CUPY = cupy is not None
 
 
 # Early bind the synchronization symbols to avoid the attribute lookup overhead
@@ -37,7 +39,7 @@ if HAVE_CUPY:
 
 if HAVE_TORCH and torch.backends.cuda.is_built() and torch.cuda.is_available():
     # In [15]: %timeit torch.cuda.synchronize()
-    # 4.27 μs ± 16.1 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)    
+    # 4.27 μs ± 16.1 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
     torch_synchronize = torch.cuda.synchronize
 
 

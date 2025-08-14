@@ -1,9 +1,15 @@
 import pytest
 import numpy as np
-import jax.numpy as jnp
-import torch
 
 import utils
+
+# import the available array backends
+jnp = utils.try_import("jax.numpy")
+torch = utils.try_import("torch")
+cupy = utils.try_import("cupy")
+
+AVAILABLE_MODULES = [x for x in [np, jnp, torch, cupy] if x is not None]
+
 
 def run_matmul(a, xp):
     res = xp.matmul(a, a)
@@ -11,7 +17,7 @@ def run_matmul(a, xp):
 
 
 #@pytest.mark.benchmark(warmup=True, warmup_iterations=100, disable_gc=True) -- moved to pytest.ini
-@pytest.mark.parametrize('xp', [jnp, np, torch])
+@pytest.mark.parametrize('xp', AVAILABLE_MODULES)
 def test_matmul(benchmark, xp):
 
     rng = np.random.default_rng(123)
