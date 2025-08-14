@@ -85,8 +85,9 @@ else:
 
     devices = ["cuda", "cpu"]
     for device in devices:
+       torch.set_default_device(device)
        try:
-           torch.set_default_device(device)
+           torch.get_default_device()      # fails if "cuda" is not available
            SKIPIT = False
        except:
            SKIPIT = True

@@ -23,7 +23,11 @@ def run_matmul(a, xp):
 @pytest.mark.parametrize('device', ['cpu', 'cuda'])
 def test_matmul(benchmark, xp, device):
 
-    utils.configure_backend(xp, device=device)    # use f64 etc
+    try:
+        utils.configure_backend(xp, device=device)    # use f64 etc
+        xp.asarray([1, 2, 3])   # pytorch errors out if CUDA is not available
+    except:
+        pytest.xfail(f"{xp.__name__} & device {device.upper()} do not play ball.")
 
     # generate the same data for all backends
     rng = np.random.default_rng(123)
