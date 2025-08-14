@@ -4,7 +4,8 @@ import importlib
 from array_api_compat import (
     is_jax_namespace as is_jax,
     is_torch_namespace as is_torch,
-    is_cupy_namespace as is_cupy
+    is_cupy_namespace as is_cupy,
+    is_numpy_namespace as is_numpy,
 )
 
 
@@ -25,6 +26,20 @@ cupy = try_import("cupy")
 HAVE_JAX = jax is not None
 HAVE_TORCH = torch is not None
 HAVE_CUPY = cupy is not None
+
+
+def configure_backend(xp, device: str):
+    """Set the defaults for a backend.
+    """
+    if is_jax(xp):
+        jax.config.update("jax_enable_x64", True)
+        jax.config.update("jax_default_device", jax.devices(device)[0])
+    elif is_torch(xp):
+        torch.set_default_device(device)
+        torch.set_default_dtype(torch.float64)
+    elif is_numpy(xp):
+        if device != "cpu":
+            raise ValueError(f"{device=} is invalid for NumPy.")
 
 
 # Early bind the synchronization symbols to avoid the attribute lookup overhead

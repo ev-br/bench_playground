@@ -18,14 +18,19 @@ def run_matmul(a, xp):
 
 #@pytest.mark.benchmark(warmup=True, warmup_iterations=100, disable_gc=True) -- moved to pytest.ini
 @pytest.mark.parametrize('xp', AVAILABLE_MODULES)
-def test_matmul(benchmark, xp):
+@pytest.mark.parametrize('device', ['cpu', 'cuda'])
+def test_matmul(benchmark, xp, device):
 
+    utils.configure_backend(xp, device=device)    # use f64 etc
+
+    # generate the same data for all backends
     rng = np.random.default_rng(123)
     a = rng.uniform(size=(100, 100))
-    aa = xp.asarray(a)
+    aa = xp.asarray(a)     # NB: rely on the default device from configure_backend
 
-    # benchmark._timer = utils.get_timer(benchmark._timer, xp)
+    # use xp-specific synchronization
     func = utils.wrap_function(run_matmul, xp)
 
+    # run the benchmark
     result = benchmark(func, aa, xp)
 
