@@ -10,6 +10,8 @@ cupy = utils.try_import("cupy")
 
 AVAILABLE_MODULES = [x for x in [np, jnp, torch, cupy] if x is not None]
 
+N = 100
+
 
 def run_matmul(a, xp):
     res = xp.matmul(a, a)
@@ -25,7 +27,7 @@ def test_matmul(benchmark, xp, device):
 
     # generate the same data for all backends
     rng = np.random.default_rng(123)
-    a = rng.uniform(size=(100, 100))
+    a = rng.uniform(size=(N, N))
     aa = xp.asarray(a)     # NB: rely on the default device from configure_backend
 
     # use xp-specific synchronization

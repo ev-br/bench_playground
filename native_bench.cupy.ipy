@@ -1,0 +1,109 @@
+# coding: utf-8
+
+N = 100
+
+def func(a):
+    return a @ a
+
+print("="*10, "N = ", N)
+
+##### NumPy #######
+
+import numpy as np
+rng = np.random.default_rng(123)
+a = rng.uniform(size=(N, N))
+
+print("\n*** numpy: ")
+
+%timeit func(a)
+
+##### CuPy ########
+
+try:
+    import cupy as cp
+except:
+    cp = None
+
+if cp is None:
+   print("CuPy not available; skipping")
+else:
+    from cupyx.profiler import benchmark as cp_benchmark
+    rng = cp.random.default_rng(123)
+    a = rng.uniform(size=(N, N))
+
+    prof = cp_benchmark(func, (a,), name='matmul', n_repeat=10)
+    cpu_time = prof.cpu_times.mean()
+    gpu_time = prof.gpu_times.mean()
+    print(f"\n*** CuPY:")
+    print("cpu_time (ms): ", cpu_time*1000, "  gpu_time (ms)", gpu_time*1000)
+    # prof: cpu_time (ms):  0.043816608376801014   gpu_time (ms) 0.207007996737957
+
+
+
+###### Jax #######
+
+try:
+    import jax
+    import jax.numpy as jnp
+except:
+    jax = None
+
+if jax is None:
+    print("JAX not available; skipping")
+else:
+    jax.config.update("jax_enable_x64", True)
+
+    devices = ["cuda", "cpu"]
+    for device in devices:
+        try:
+            jax.config.update("jax_default_device", jax.devices(device)[0])
+            SKIPIT = False
+        except:
+            SKIPIT = True
+            print(f"jax {device.upper()} is not available; skipping.")
+
+        if not SKIPIT:
+            rng = np.random.default_rng(123)
+            a_np = rng.uniform(size=(N, N))
+            a = jnp.asarray(a_np)
+            print(f"\n*** jax {a.device}: ")
+
+            %timeit jax.block_until_ready(func(a))
+
+
+###### Torch #######
+
+try:
+    import torch
+except:
+    torch = None
+
+if torch is None:
+   print("PyTorch is not available; skipping")
+else:
+    torch.set_default_dtype(torch.float64)
+
+    devices = ["cuda", "cpu"]
+    for device in devices:
+       try:
+           torch.set_default_device(device)
+           SKIPIT = False
+       except:
+           SKIPIT = True
+           print(f"torch {device.upper()} is not available; skipping.")
+
+       if not SKIPIT:
+           rng = np.random.default_rng(123)
+           a_np = rng.uniform(size=(N, N))
+           a = torch.asarray(a_np)
+           print(f"\n*** torch {a.device}: ")
+
+           from torch.utils.benchmark import Timer as TorchTimer
+           torch_timer = TorchTimer(
+               stmt = "func(a)",
+               setup="from __main__ import func",
+               globals = {"a": a},
+               num_threads=torch.get_num_threads()  # !!!
+           )
+           t = torch_timer.timeit(10)
+           print(t)

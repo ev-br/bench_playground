@@ -40,6 +40,9 @@ def configure_backend(xp, device: str):
     elif is_numpy(xp):
         if device != "cpu":
             raise ValueError(f"{device=} is invalid for NumPy.")
+    elif is_cupy(xp):
+        if device != "cuda":
+            raise ValueError(f"{device=} is invalid for CuPy.")
 
 
 # Early bind the synchronization symbols to avoid the attribute lookup overhead
