@@ -113,3 +113,68 @@ def get_timer(base_timer, xp):
 
     return timer
 
+
+###############################
+
+# Helpers for loading, slicing and dicing benchmark results
+import json
+import re
+from collections import defaultdict
+
+
+def read_json(fname: str, machine=None) -> list[dict]:
+    """Read the json, return a list of BenchmarkResult dicts.
+    """
+    with open(fname, "r") as f:
+        raw_json = json.load(f)
+
+    if machine is not None:
+        _machine = raw_json["machine_info"]["node"]
+        if _machine != machine:
+            raise ValueError(
+                f"{machine = } requested by {fname} has the runs on node = {_machine}"
+            )
+
+    return raw_json["benchmarks"]
+
+
+def group_by(list_of_results, pred):
+    """ Group the list of BenchmarkResult dicts by the predicate value.
+
+    Parameters
+    ----------
+    list_of_results: list[dict]
+        List of BenchmarkResult dicts
+    pred: callable
+        The signature is pred(BenchmarkResult) -> value
+        list_of_result entries will be grouped by the return value
+
+    Returns
+    -------
+    dict
+        The keys are values as returned by `pred`, the values are lists of BenchmarkResults
+    """
+    grouped = defaultdict(list)
+    for bmark in list_of_results:
+        value = pred(bmark)
+        grouped[value].append(bmark)
+
+    return dict(grouped)
+
+
+
+def normalize_module_name(s: str):
+    """Normalize the module repr to module.__name__
+
+    Usage:
+
+    >>> lst = read_json("path/to.json")
+    >>> for elem in lst:
+    ...     elem["params"]["xp"] = normalize_module_name(elem["params"]["xp"])
+    """
+    match = re.search(r"UNSERIALIZABLE\[<module '([\w\.]+)'", s)
+    if match:
+        module_name = match.group(1)
+        return module_name
+    else:
+        return s 

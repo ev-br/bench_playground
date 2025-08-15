@@ -18,10 +18,10 @@ def run_matmul(a, xp):
     return res
 
 
-#@pytest.mark.benchmark(warmup=True, warmup_iterations=100, disable_gc=True) -- moved to pytest.ini
+@pytest.mark.parametrize('N', [10, 20, 50, 100, 200, 500])
 @pytest.mark.parametrize('xp', AVAILABLE_MODULES)
 @pytest.mark.parametrize('device', ['cpu', 'cuda'])
-def test_matmul(benchmark, xp, device):
+def test_matmul(benchmark, N, xp, device):
 
     try:
         utils.configure_backend(xp, device=device)    # use f64 etc
