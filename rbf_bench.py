@@ -20,7 +20,7 @@ jit = "jit" if os.environ.get("SCIPY_JIT", "0") == "1" else "eager"
 
 
 Nobs = 100
-Ns = [10]
+Ns = [50, 100, 200, 500, 1000, 2000]
 
 # set up the data to interpolate
 rng = np.random.default_rng(123)
