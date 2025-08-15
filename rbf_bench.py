@@ -1,3 +1,4 @@
+import os
 import pytest
 import numpy as np
 
@@ -12,6 +13,10 @@ torch = utils.try_import("torch")
 cupy = utils.try_import("cupy")
 
 AVAILABLE_MODULES = [x for x in [np, jnp, torch, cupy] if x is not None]
+
+# JIT or eager
+jit = "jit" if os.environ.get("SCIPY_JIT", "0") == "1" else "eager"
+
 
 
 Nobs = 100
@@ -34,6 +39,9 @@ def test_rbf(benchmark, xp, device, N):
         xp.asarray([1, 2, 3])   # pytorch errors out if CUDA is not available
     except:
         pytest.xfail(f"{xp.__name__} & device {device.upper()} do not play ball.")
+
+    # https://pytest-benchmark.readthedocs.io/en/latest/usage.html#extra-info
+    benchmark.extra_info["jit"] = jit
 
     # construct the interpolator
     xobs, yobs = map(xp.asarray, (xobs_np, yobs_np))
