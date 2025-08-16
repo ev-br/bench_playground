@@ -29,7 +29,7 @@ yobs_np = np.sum(xobs_np, axis=1)*np.exp(-6*np.sum(xobs_np**2, axis=1))
 
 
 @pytest.mark.parametrize('xp', AVAILABLE_MODULES)
-@pytest.mark.parametrize('device', ['cpu'])
+@pytest.mark.parametrize('device', ['cpu', 'cuda'])
 @pytest.mark.parametrize('N', Ns)
 def test_rbf(benchmark, xp, device, N):
 
