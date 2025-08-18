@@ -1,3 +1,4 @@
+import os
 import functools
 import importlib
 
@@ -100,6 +101,27 @@ def wrap_function(func, xp):
     else:
         return func
 
+
+
+
+# XXX This should happen at a suite-specific config
+def get_env_vars():
+    """Query the state of relevant env variables, return a dict of their values."""
+    dct = {}
+
+    for var in [
+        # threading control
+        "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS", "OPENMP_NUM_THREADS", "NUMBA_NUM_THREADS",
+        # jax threading control (?)
+        "XLA_FLAGS",
+        # scipy-specific
+        "SCIPY_ARRAY_API",
+        "SCIPY_DEVICE",
+        "SCIPY_JIT",
+    ]:
+        if var in os.environ:
+            dct[var] = os.environ[var]
+    return dct
 
 ##########################
 

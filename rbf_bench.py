@@ -1,4 +1,5 @@
 import os
+import socket
 import pytest
 import numpy as np
 
@@ -17,6 +18,8 @@ AVAILABLE_MODULES = [x for x in [np, jnp, torch, cupy] if x is not None]
 # JIT or eager
 jit = "jit" if os.environ.get("SCIPY_JIT", "0") == "1" else "eager"
 
+# XXX this should happen in the suite-specific config instead?
+machine = socket.gethostname()
 
 
 Nobs = 100
@@ -38,10 +41,12 @@ def test_rbf(benchmark, xp, device, N):
         utils.configure_backend(xp, device=device)    # use f64 etc
         xp.asarray([1, 2, 3])   # pytorch errors out if CUDA is not available
     except:
-        pytest.xfail(f"{xp.__name__} & device {device.upper()} do not play ball.")
+        pytest.skip(f"{xp.__name__} & device {device.upper()} are incompatible.")
 
     # https://pytest-benchmark.readthedocs.io/en/latest/usage.html#extra-info
     benchmark.extra_info["jit"] = jit
+    benchmark.extra_info["machine"] = machine
+    benchmark.extra_info["env_vars"] = utils.get_env_vars()
 
     # construct the interpolator
     xobs, yobs = map(xp.asarray, (xobs_np, yobs_np))
