@@ -47,6 +47,7 @@ def test_rbf(benchmark, xp, device, N):
     benchmark.extra_info["jit"] = jit
     benchmark.extra_info["machine"] = machine
     benchmark.extra_info["env_vars"] = utils.get_env_vars()
+    benchmark.extra_info["scipy_commit"] = "413afb7bc9e922a0b6778ae407cc95ab9bac56c1"  # XXX
 
     # construct the interpolator
     xobs, yobs = map(xp.asarray, (xobs_np, yobs_np))
