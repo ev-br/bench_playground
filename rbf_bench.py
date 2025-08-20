@@ -18,12 +18,17 @@ AVAILABLE_MODULES = [x for x in [np, jnp, torch, cupy] if x is not None]
 # JIT or eager
 jit = "jit" if os.environ.get("SCIPY_JIT", "0") == "1" else "eager"
 
-# XXX this should happen in the suite-specific config instead?
+# XXX suite-specific config instead?
 machine = socket.gethostname()
 
 
+# XXX suite-specific config instead?
+for xp in AVAILABLE_MODULES:
+    utils.hard_reset(xp, jit_caches=(jit == "jit"))
+
+
 Nobs = 100
-Ns = [50, 100, 200, 500, 1000, 2000]
+Ns = [50, 100, 200, 500, 1000] #, 2000]
 
 # set up the data to interpolate
 rng = np.random.default_rng(123)
@@ -47,7 +52,6 @@ def test_rbf(benchmark, xp, device, N):
     benchmark.extra_info["jit"] = jit
     benchmark.extra_info["machine"] = machine
     benchmark.extra_info["env_vars"] = utils.get_env_vars()
-    benchmark.extra_info["scipy_commit"] = "413afb7bc9e922a0b6778ae407cc95ab9bac56c1"  # XXX
 
     # construct the interpolator
     xobs, yobs = map(xp.asarray, (xobs_np, yobs_np))

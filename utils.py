@@ -1,4 +1,7 @@
 import os
+import getpass
+import shutil
+
 import functools
 import importlib
 
@@ -44,6 +47,32 @@ def configure_backend(xp, device: str):
     elif is_cupy(xp):
         if device != "cuda":
             raise ValueError(f"{device=} is invalid for CuPy.")
+
+
+def hard_reset(xp, jit_caches=False):
+    """Reset backend-specific caches. Include filesystem caches, too.
+    """
+    if is_torch(xp):
+        torch._dynamo.reset()
+
+        if jit_caches:
+            # purge the filesystem-level Torch.Inductor cache, too
+            # $ rm -rf /tmp/torchinductor_`whoami`
+            # cf https://github.com/pytorch/pytorch/issues/160812#issuecomment-3198919245
+            username = getpass.getuser()
+            shutil.rmtree(f"/tmp/torchinductor_{username}", ignore_errors=True)
+
+        # NB: could also manipulate torch.set_num_threads here; don't do it yet
+        # because we set OMP_NUM_THREADS at compilation time, and other backends
+        # also use env variables (NUMBA_NUM_THREADS for numba, XLA_FLAGS for jax, etc)
+
+    elif is_jax(xp):
+        if jit_caches:
+            jax.clear_caches()
+            jax.config.update("jax_enable_compilation_cache", False)
+    elif is_cupy(xp):
+        # XXX: need clear the kernel caches?
+        pass
 
 
 # Early bind the synchronization symbols to avoid the attribute lookup overhead
