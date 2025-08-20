@@ -1,0 +1,1583 @@
+{
+    "machine_info": {
+        "node": "qgpu3",
+        "processor": "x86_64",
+        "machine": "x86_64",
+        "python_compiler": "GCC 11.3.0",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.11.0",
+        "python_version": "3.11.0",
+        "python_build": [
+            "main",
+            "Jan 14 2023 12:27:40"
+        ],
+        "release": "6.8.0-71-generic",
+        "system": "Linux",
+        "cpu": {
+            "python_version": "3.11.0.final.0 (64 bit)",
+            "cpuinfo_version": [
+                9,
+                0,
+                0
+            ],
+            "cpuinfo_version_string": "9.0.0",
+            "arch": "X86_64",
+            "bits": 64,
+            "count": 64,
+            "arch_string_raw": "x86_64",
+            "vendor_id_raw": "AuthenticAMD",
+            "brand_raw": "AMD Ryzen Threadripper 3970X 32-Core Processor",
+            "hz_advertised_friendly": "2.2000 GHz",
+            "hz_actual_friendly": "2.2000 GHz",
+            "hz_advertised": [
+                2200000000,
+                0
+            ],
+            "hz_actual": [
+                2200000000,
+                0
+            ],
+            "model": 49,
+            "family": 23,
+            "flags": [
+                "3dnowext",
+                "3dnowprefetch",
+                "abm",
+                "adx",
+                "aes",
+                "amd_ppin",
+                "aperfmperf",
+                "apic",
+                "arat",
+                "avic",
+                "avx",
+                "avx2",
+                "bmi1",
+                "bmi2",
+                "bpext",
+                "cat_l3",
+                "cdp_l3",
+                "clflush",
+                "clflushopt",
+                "clwb",
+                "clzero",
+                "cmov",
+                "cmp_legacy",
+                "constant_tsc",
+                "cpb",
+                "cpuid",
+                "cqm",
+                "cqm_llc",
+                "cqm_mbm_local",
+                "cqm_mbm_total",
+                "cqm_occup_llc",
+                "cr8_legacy",
+                "cx16",
+                "cx8",
+                "dbx",
+                "de",
+                "decodeassists",
+                "extapic",
+                "extd_apicid",
+                "f16c",
+                "flushbyasid",
+                "fma",
+                "fpu",
+                "fsgsbase",
+                "fxsr",
+                "fxsr_opt",
+                "ht",
+                "hw_pstate",
+                "ibpb",
+                "ibs",
+                "irperf",
+                "lahf_lm",
+                "lbrv",
+                "lm",
+                "mba",
+                "mca",
+                "mce",
+                "misalignsse",
+                "mmx",
+                "mmxext",
+                "monitor",
+                "movbe",
+                "msr",
+                "mtrr",
+                "mwaitx",
+                "nonstop_tsc",
+                "nopl",
+                "npt",
+                "nrip_save",
+                "nx",
+                "osvw",
+                "osxsave",
+                "overflow_recov",
+                "pae",
+                "pat",
+                "pausefilter",
+                "pci_l2i",
+                "pclmulqdq",
+                "pdpe1gb",
+                "perfctr_core",
+                "perfctr_llc",
+                "perfctr_nb",
+                "pfthreshold",
+                "pge",
+                "pni",
+                "popcnt",
+                "pqe",
+                "pqm",
+                "pse",
+                "pse36",
+                "rapl",
+                "rdpid",
+                "rdpru",
+                "rdrand",
+                "rdrnd",
+                "rdseed",
+                "rdt_a",
+                "rdtscp",
+                "rep_good",
+                "sep",
+                "sev",
+                "sev_es",
+                "sha",
+                "sha_ni",
+                "skinit",
+                "smap",
+                "smca",
+                "smep",
+                "ssbd",
+                "sse",
+                "sse2",
+                "sse4_1",
+                "sse4_2",
+                "sse4a",
+                "ssse3",
+                "stibp",
+                "succor",
+                "svm",
+                "svm_lock",
+                "syscall",
+                "tce",
+                "topoext",
+                "tsc",
+                "tsc_scale",
+                "umip",
+                "v_spec_ctrl",
+                "v_vmsave_vmload",
+                "vgif",
+                "vmcb_clean",
+                "vme",
+                "vmmcall",
+                "wbnoinvd",
+                "wdt",
+                "xgetbv1",
+                "xsave",
+                "xsavec",
+                "xsaveerptr",
+                "xsaveopt",
+                "xsaves"
+            ],
+            "l3_cache_size": 524288,
+            "l2_cache_size": 16777216,
+            "l1_data_cache_size": 1048576,
+            "l1_instruction_cache_size": 1048576,
+            "l2_cache_line_size": 512,
+            "l2_cache_associativity": 6
+        }
+    },
+    "commit_info": {
+        "id": "051d1251405a201798d1317806a2495b3c8b825c",
+        "time": "2025-08-20T13:50:46+02:00",
+        "author_time": "2025-08-20T13:50:36+02:00",
+        "dirty": false,
+        "project": "bench_playground",
+        "branch": "master"
+    },
+    "benchmarks": [
+        {
+            "group": null,
+            "name": "test_rbf[50-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cpu-numpy]",
+            "params": {
+                "N": 50,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "50-cpu-numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0022782040480524303,
+                "max": 0.002412007278762758,
+                "mean": 0.002341250073061221,
+                "stddev": 4.433351881411931e-05,
+                "rounds": 9,
+                "median": 0.002343745999969542,
+                "iqr": 6.079716258682293e-05,
+                "q1": 0.0023094882222358137,
+                "q3": 0.0023702853848226366,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0022782040480524303,
+                "hd15iqr": 0.002412007278762758,
+                "ops": 427.12225041918924,
+                "total": 0.02107125065755099,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cpu-jax.numpy]",
+            "params": {
+                "N": 50,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "50-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0004950583460740745,
+                "max": 0.0007223639129661024,
+                "mean": 0.0006352900967467576,
+                "stddev": 9.606153832952079e-05,
+                "rounds": 7,
+                "median": 0.0006870371070690453,
+                "iqr": 0.00015575111872749396,
+                "q1": 0.0005387369825039059,
+                "q3": 0.0006944881012313998,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0004950583460740745,
+                "hd15iqr": 0.0007223639129661024,
+                "ops": 1574.084036758761,
+                "total": 0.004447030677227303,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[50-cpu-torch]",
+            "params": {
+                "N": 50,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "50-cpu-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0007131231469102204,
+                "max": 0.0007167554330080747,
+                "mean": 0.0007155136175653232,
+                "stddev": 1.2140378145080418e-06,
+                "rounds": 7,
+                "median": 0.0007157676699571312,
+                "iqr": 1.2662931694648171e-06,
+                "q1": 0.0007151494435966016,
+                "q3": 0.0007164157367660664,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.0007150862831622363,
+                "hd15iqr": 0.0007167554330080747,
+                "ops": 1397.5974397282585,
+                "total": 0.005008595322957263,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cuda-jax.numpy]",
+            "params": {
+                "N": 50,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "50-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.00046983263292349876,
+                "max": 0.0005358230650890619,
+                "mean": 0.0005070327975720699,
+                "stddev": 3.0602121653034864e-05,
+                "rounds": 7,
+                "median": 0.0005174949190113694,
+                "iqr": 6.050382682587952e-05,
+                "q1": 0.00047467007982777434,
+                "q3": 0.0005351739066536539,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.00046983263292349876,
+                "hd15iqr": 0.0005358230650890619,
+                "ops": 1972.2590033396395,
+                "total": 0.00354922958300449,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[50-cuda-torch]",
+            "params": {
+                "N": 50,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "50-cuda-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0002856901360210031,
+                "max": 0.0002859900600742549,
+                "mean": 0.0002857921512997044,
+                "stddev": 1.1614660975306017e-07,
+                "rounds": 7,
+                "median": 0.0002857302760239691,
+                "iqr": 1.7026660498225188e-07,
+                "q1": 0.00028569792857160796,
+                "q3": 0.0002858681951765902,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.0002856901360210031,
+                "hd15iqr": 0.0002859900600742549,
+                "ops": 3499.0464064610383,
+                "total": 0.002000545059097931,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cuda-cupy]",
+            "params": {
+                "N": 50,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "50-cuda-cupy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.002368207450490445,
+                "max": 0.002373970630578697,
+                "mean": 0.0023690853930181926,
+                "stddev": 1.843373310294956e-06,
+                "rounds": 9,
+                "median": 0.002368488449137658,
+                "iqr": 3.878929419444746e-07,
+                "q1": 0.002368317016516812,
+                "q3": 0.0023687049094587567,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.002368207450490445,
+                "hd15iqr": 0.002373970630578697,
+                "ops": 422.1038224063377,
+                "total": 0.021321768537163735,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cpu-numpy]",
+            "params": {
+                "N": 100,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "100-cpu-numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.02848321229685098,
+                "max": 0.050743471411988136,
+                "mean": 0.04076750118152372,
+                "stddev": 0.006943162759489587,
+                "rounds": 7,
+                "median": 0.04180597709491849,
+                "iqr": 0.0066872202267404535,
+                "q1": 0.03743974036769942,
+                "q3": 0.04412696059443987,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.02848321229685098,
+                "hd15iqr": 0.050743471411988136,
+                "ops": 24.529342515925677,
+                "total": 0.285372508270666,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cpu-jax.numpy]",
+            "params": {
+                "N": 100,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "100-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.002818200241308659,
+                "max": 0.002977141889277846,
+                "mean": 0.002876376600179356,
+                "stddev": 5.616072603706849e-05,
+                "rounds": 8,
+                "median": 0.0028677509701810775,
+                "iqr": 8.276881300844224e-05,
+                "q1": 0.002828657776117325,
+                "q3": 0.002911426589125767,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.002818200241308659,
+                "hd15iqr": 0.002977141889277846,
+                "ops": 347.6596214618229,
+                "total": 0.023011012801434846,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[100-cpu-torch]",
+            "params": {
+                "N": 100,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "100-cpu-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.00265471912920475,
+                "max": 0.0026674345810897646,
+                "mean": 0.0026608073365059683,
+                "stddev": 4.110170963898546e-06,
+                "rounds": 8,
+                "median": 0.0026610929053276777,
+                "iqr": 4.863955546170317e-06,
+                "q1": 0.0026580978150013835,
+                "q3": 0.002662961770547554,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.00265471912920475,
+                "hd15iqr": 0.0026674345810897646,
+                "ops": 375.825782754022,
+                "total": 0.021286458692047747,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cuda-jax.numpy]",
+            "params": {
+                "N": 100,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "100-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0018407996480905072,
+                "max": 0.0018914770550542959,
+                "mean": 0.0018551089723284047,
+                "stddev": 1.4434289183062009e-05,
+                "rounds": 10,
+                "median": 0.001850645703530905,
+                "iqr": 1.0309395966706485e-05,
+                "q1": 0.0018471112147111584,
+                "q3": 0.0018574206106778649,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0018407996480905072,
+                "hd15iqr": 0.0018914770550542959,
+                "ops": 539.0518912454339,
+                "total": 0.018551089723284047,
+                "iterations": 108
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[100-cuda-torch]",
+            "params": {
+                "N": 100,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "100-cuda-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.000737726683029905,
+                "max": 0.000746856041951105,
+                "mean": 0.0007417772507095444,
+                "stddev": 3.454211035584013e-06,
+                "rounds": 7,
+                "median": 0.0007399426228366792,
+                "iqr": 5.3640263504349615e-06,
+                "q1": 0.0007394865752430632,
+                "q3": 0.0007448506015934981,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.000737726683029905,
+                "hd15iqr": 0.000746856041951105,
+                "ops": 1348.1136001993234,
+                "total": 0.005192440754966811,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cuda-cupy]",
+            "params": {
+                "N": 100,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "100-cuda-cupy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.009233596390113235,
+                "max": 0.009344570050016045,
+                "mean": 0.009251635395589151,
+                "stddev": 4.10255467703318e-05,
+                "rounds": 7,
+                "median": 0.009235665940213949,
+                "iqr": 3.922773757950027e-06,
+                "q1": 0.009234949011588469,
+                "q3": 0.009238871785346419,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.009233596390113235,
+                "hd15iqr": 0.009344570050016045,
+                "ops": 108.08899802479938,
+                "total": 0.06476144776912407,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cpu-numpy]",
+            "params": {
+                "N": 200,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "200-cpu-numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.114474568516016,
+                "max": 0.15798746899235994,
+                "mean": 0.13997711683623493,
+                "stddev": 0.014916008686250783,
+                "rounds": 9,
+                "median": 0.1450271069770679,
+                "iqr": 0.019608850998338312,
+                "q1": 0.1311212740256451,
+                "q3": 0.15073012502398342,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.114474568516016,
+                "hd15iqr": 0.15798746899235994,
+                "ops": 7.144024842074307,
+                "total": 1.2597940515261143,
+                "iterations": 2
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cpu-jax.numpy]",
+            "params": {
+                "N": 200,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "200-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0063348578196018935,
+                "max": 0.006484494938049466,
+                "mean": 0.006387363122443535,
+                "stddev": 5.0453233527341256e-05,
+                "rounds": 7,
+                "median": 0.00638843840919435,
+                "iqr": 5.537033197470023e-05,
+                "q1": 0.0063474365579895674,
+                "q3": 0.006402806889964268,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0063348578196018935,
+                "hd15iqr": 0.006484494938049466,
+                "ops": 156.55912789524362,
+                "total": 0.04471154185710474,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[200-cpu-torch]",
+            "params": {
+                "N": 200,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "200-cpu-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.011103827829679681,
+                "max": 0.011310039941842357,
+                "mean": 0.011226292266251726,
+                "stddev": 6.07816469696285e-05,
+                "rounds": 10,
+                "median": 0.011230326445204102,
+                "iqr": 3.331211499041885e-05,
+                "q1": 0.01121403983173271,
+                "q3": 0.01124735194672313,
+                "iqr_outliers": 4,
+                "stddev_outliers": 4,
+                "outliers": "4;4",
+                "ld15iqr": 0.01121403983173271,
+                "hd15iqr": 0.011302962058430744,
+                "ops": 89.076604838285,
+                "total": 0.11226292266251728,
+                "iterations": 18
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cuda-jax.numpy]",
+            "params": {
+                "N": 200,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "200-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.005653641519602388,
+                "max": 0.00566311564994976,
+                "mean": 0.005658258368327682,
+                "stddev": 3.0505614147251407e-06,
+                "rounds": 7,
+                "median": 0.005657951270695776,
+                "iqr": 3.662044182419638e-06,
+                "q1": 0.005656409712391905,
+                "q3": 0.005660071756574325,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.005653641519602388,
+                "hd15iqr": 0.00566311564994976,
+                "ops": 176.73282747170725,
+                "total": 0.039607808578293775,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[200-cuda-torch]",
+            "params": {
+                "N": 200,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "200-cuda-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0025061731296591463,
+                "max": 0.0025072661391459406,
+                "mean": 0.002506870800862089,
+                "stddev": 3.546086281433492e-07,
+                "rounds": 8,
+                "median": 0.0025068687892053276,
+                "iqr": 4.595087375490123e-07,
+                "q1": 0.0025067176355514677,
+                "q3": 0.0025071771442890167,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0025061731296591463,
+                "hd15iqr": 0.0025072661391459406,
+                "ops": 398.90368488719463,
+                "total": 0.02005496640689671,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cuda-cupy]",
+            "params": {
+                "N": 200,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "200-cuda-cupy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.036561586218886076,
+                "max": 0.03656945929396897,
+                "mean": 0.03656422145930784,
+                "stddev": 2.7424194566816587e-06,
+                "rounds": 7,
+                "median": 0.03656403319910169,
+                "iqr": 3.3538322895820816e-06,
+                "q1": 0.03656204759608954,
+                "q3": 0.03656540142837912,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.036561586218886076,
+                "hd15iqr": 0.03656945929396897,
+                "ops": 27.34913968051789,
+                "total": 0.2559495502151549,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cpu-numpy]",
+            "params": {
+                "N": 500,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "500-cpu-numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.8369640449527651,
+                "max": 0.9949979870580137,
+                "mean": 0.9245632794086954,
+                "stddev": 0.05926474073800083,
+                "rounds": 7,
+                "median": 0.9339908610563725,
+                "iqr": 0.10004161571851,
+                "q1": 0.8719787079608068,
+                "q3": 0.9720203236793168,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.8369640449527651,
+                "hd15iqr": 0.9949979870580137,
+                "ops": 1.0815917333852476,
+                "total": 6.471942955860868,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cpu-jax.numpy]",
+            "params": {
+                "N": 500,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "500-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.039327672217041254,
+                "max": 0.03981627039611339,
+                "mean": 0.03956278849925313,
+                "stddev": 0.0001848420863872298,
+                "rounds": 7,
+                "median": 0.039530035783536734,
+                "iqr": 0.00030189831159077585,
+                "q1": 0.039441964455181736,
+                "q3": 0.03974386276677251,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.039327672217041254,
+                "hd15iqr": 0.03981627039611339,
+                "ops": 25.276276974735435,
+                "total": 0.27693951949477197,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[500-cpu-torch]",
+            "params": {
+                "N": 500,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "500-cpu-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.05903517920523882,
+                "max": 0.06493968300055712,
+                "mean": 0.060887793248652344,
+                "stddev": 0.0019914919082639473,
+                "rounds": 7,
+                "median": 0.060370117402635516,
+                "iqr": 0.001819019700633362,
+                "q1": 0.05969894886948168,
+                "q3": 0.061517968570115045,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.05903517920523882,
+                "hd15iqr": 0.06493968300055712,
+                "ops": 16.4236531929515,
+                "total": 0.4262145527405664,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cuda-jax.numpy]",
+            "params": {
+                "N": 500,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "500-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.032705744891427455,
+                "max": 0.03277432071045041,
+                "mean": 0.032740508069816446,
+                "stddev": 2.2867962310162128e-05,
+                "rounds": 7,
+                "median": 0.03274058229289949,
+                "iqr": 3.089021192864e-05,
+                "q1": 0.032724582165246825,
+                "q3": 0.032755472377175465,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.032705744891427455,
+                "hd15iqr": 0.03277432071045041,
+                "ops": 30.54320347954229,
+                "total": 0.2291835564887151,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[500-cuda-torch]",
+            "params": {
+                "N": 500,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "500-cuda-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.01492503092491201,
+                "max": 0.014928346632846765,
+                "mean": 0.014926603556211506,
+                "stddev": 1.2204929385577233e-06,
+                "rounds": 10,
+                "median": 0.014926885570665556,
+                "iqr": 2.0407938531464415e-06,
+                "q1": 0.014925243000366859,
+                "q3": 0.014927283794220005,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.01492503092491201,
+                "hd15iqr": 0.014928346632846765,
+                "ops": 66.99447709146557,
+                "total": 0.14926603556211504,
+                "iterations": 14
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cuda-cupy]",
+            "params": {
+                "N": 500,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "500-cuda-cupy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.2263034349307418,
+                "max": 0.22632243484258652,
+                "mean": 0.22631564697561166,
+                "stddev": 7.421621435975339e-06,
+                "rounds": 9,
+                "median": 0.2263185849878937,
+                "iqr": 1.3253360521048307e-05,
+                "q1": 0.22630844422383234,
+                "q3": 0.2263216975843534,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.2263034349307418,
+                "hd15iqr": 0.22632243484258652,
+                "ops": 4.418607433306468,
+                "total": 2.036840822780505,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cpu-numpy]",
+            "params": {
+                "N": 1000,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "1000-cpu-numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 2.230978952953592,
+                "max": 2.340050767874345,
+                "mean": 2.2998567204257205,
+                "stddev": 0.04224238851776745,
+                "rounds": 7,
+                "median": 2.3140462799929082,
+                "iqr": 0.06449619785416871,
+                "q1": 2.264560819894541,
+                "q3": 2.3290570177487098,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 2.230978952953592,
+                "hd15iqr": 2.340050767874345,
+                "ops": 0.43480969536871517,
+                "total": 16.098997042980045,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cpu-jax.numpy]",
+            "params": {
+                "N": 1000,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "1000-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.15408401901368052,
+                "max": 0.16069439856801182,
+                "mean": 0.1573497278649094,
+                "stddev": 0.002196499507420976,
+                "rounds": 7,
+                "median": 0.15786526747979224,
+                "iqr": 0.0028785480244550854,
+                "q1": 0.1557208198646549,
+                "q3": 0.15859936788911,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.15408401901368052,
+                "hd15iqr": 0.16069439856801182,
+                "ops": 6.355269968172664,
+                "total": 1.1014480950543657,
+                "iterations": 2
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cpu-torch]",
+            "params": {
+                "N": 1000,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "1000-cpu-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.22480801888741553,
+                "max": 0.22706346795894206,
+                "mean": 0.2257187071825481,
+                "stddev": 0.0008331860959143595,
+                "rounds": 9,
+                "median": 0.22551277792081237,
+                "iqr": 0.0014772139256820083,
+                "q1": 0.22495052043814212,
+                "q3": 0.22642773436382413,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.22480801888741553,
+                "hd15iqr": 0.22706346795894206,
+                "ops": 4.430292962786015,
+                "total": 2.031468364642933,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cuda-jax.numpy]",
+            "params": {
+                "N": 1000,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "1000-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.12554709753021598,
+                "max": 0.12579941051080823,
+                "mean": 0.12561254392494448,
+                "stddev": 8.078827237036374e-05,
+                "rounds": 8,
+                "median": 0.12558981025358662,
+                "iqr": 6.057549035176635e-05,
+                "q1": 0.1255632679676637,
+                "q3": 0.12562384345801547,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.12554709753021598,
+                "hd15iqr": 0.12579941051080823,
+                "ops": 7.96098835955043,
+                "total": 1.0049003513995558,
+                "iterations": 2
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cuda-torch]",
+            "params": {
+                "N": 1000,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "1000-cuda-torch",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.05897239081095904,
+                "max": 0.058982256008312105,
+                "mean": 0.05897818597233189,
+                "stddev": 3.1236369735521895e-06,
+                "rounds": 7,
+                "median": 0.0589786330005154,
+                "iqr": 2.9945920687127203e-06,
+                "q1": 0.05897684617666528,
+                "q3": 0.05897984076873399,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.05897239081095904,
+                "hd15iqr": 0.058982256008312105,
+                "ops": 16.955421458183277,
+                "total": 0.41284730180632323,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cuda-cupy]",
+            "params": {
+                "N": 1000,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "1000-cuda-cupy",
+            "extra_info": {
+                "jit": "jit",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1",
+                    "SCIPY_JIT": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.9025287269614637,
+                "max": 0.9026132980361581,
+                "mean": 0.9025753114505538,
+                "stddev": 2.56369422893312e-05,
+                "rounds": 7,
+                "median": 0.9025726080872118,
+                "iqr": 1.7383252270519733e-05,
+                "q1": 0.9025692877476104,
+                "q3": 0.9025866709998809,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.9025689580012113,
+                "hd15iqr": 0.9026132980361581,
+                "ops": 1.1079407860080643,
+                "total": 6.3180271801538765,
+                "iterations": 1
+            }
+        }
+    ],
+    "datetime": "2025-08-20T12:58:06.707097+00:00",
+    "version": "5.1.0"
+}
