@@ -1,0 +1,861 @@
+{
+    "machine_info": {
+        "node": "gonzales",
+        "processor": "x86_64",
+        "machine": "x86_64",
+        "python_compiler": "GCC 12.3.0",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.12.0",
+        "python_version": "3.12.0",
+        "python_build": [
+            "main",
+            "Oct  3 2023 08:43:22"
+        ],
+        "release": "5.15.0-76-generic",
+        "system": "Linux",
+        "cpu": {
+            "python_version": "3.12.0.final.0 (64 bit)",
+            "cpuinfo_version": [
+                9,
+                0,
+                0
+            ],
+            "cpuinfo_version_string": "9.0.0",
+            "arch": "X86_64",
+            "bits": 64,
+            "count": 8,
+            "arch_string_raw": "x86_64",
+            "vendor_id_raw": "GenuineIntel",
+            "brand_raw": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+            "hz_advertised_friendly": "1.6000 GHz",
+            "hz_actual_friendly": "1.8000 GHz",
+            "hz_advertised": [
+                1600000000,
+                0
+            ],
+            "hz_actual": [
+                1800000000,
+                0
+            ],
+            "stepping": 12,
+            "model": 142,
+            "family": 6,
+            "flags": [
+                "3dnowprefetch",
+                "abm",
+                "acpi",
+                "adx",
+                "aes",
+                "aperfmperf",
+                "apic",
+                "arat",
+                "arch_capabilities",
+                "arch_perfmon",
+                "art",
+                "avx",
+                "avx2",
+                "bmi1",
+                "bmi2",
+                "bts",
+                "clflush",
+                "clflushopt",
+                "cmov",
+                "constant_tsc",
+                "cpuid",
+                "cpuid_fault",
+                "cx16",
+                "cx8",
+                "de",
+                "ds_cpl",
+                "dtes64",
+                "dtherm",
+                "dts",
+                "epb",
+                "ept",
+                "ept_ad",
+                "erms",
+                "est",
+                "f16c",
+                "flexpriority",
+                "flush_l1d",
+                "fma",
+                "fpu",
+                "fsgsbase",
+                "fxsr",
+                "ht",
+                "hwp",
+                "hwp_act_window",
+                "hwp_epp",
+                "hwp_notify",
+                "ibpb",
+                "ibrs",
+                "ibrs_enhanced",
+                "ida",
+                "intel_pt",
+                "invpcid",
+                "invpcid_single",
+                "lahf_lm",
+                "lm",
+                "mca",
+                "mce",
+                "md_clear",
+                "mmx",
+                "monitor",
+                "movbe",
+                "mpx",
+                "msr",
+                "mtrr",
+                "nonstop_tsc",
+                "nopl",
+                "nx",
+                "osxsave",
+                "pae",
+                "pat",
+                "pbe",
+                "pcid",
+                "pclmulqdq",
+                "pdcm",
+                "pdpe1gb",
+                "pebs",
+                "pge",
+                "pln",
+                "pni",
+                "popcnt",
+                "pse",
+                "pse36",
+                "pts",
+                "rdrand",
+                "rdrnd",
+                "rdseed",
+                "rdtscp",
+                "rep_good",
+                "sdbg",
+                "sep",
+                "sgx",
+                "smap",
+                "smep",
+                "ss",
+                "ssbd",
+                "sse",
+                "sse2",
+                "sse4_1",
+                "sse4_2",
+                "ssse3",
+                "stibp",
+                "syscall",
+                "tm",
+                "tm2",
+                "tpr_shadow",
+                "tsc",
+                "tsc_adjust",
+                "tsc_deadline_timer",
+                "tscdeadline",
+                "vme",
+                "vmx",
+                "vnmi",
+                "vpid",
+                "x2apic",
+                "xgetbv1",
+                "xsave",
+                "xsavec",
+                "xsaveopt",
+                "xsaves",
+                "xtopology",
+                "xtpr"
+            ],
+            "l3_cache_size": 6291456,
+            "l2_cache_size": 1048576,
+            "l1_data_cache_size": 131072,
+            "l1_instruction_cache_size": 131072,
+            "l2_cache_line_size": 256,
+            "l2_cache_associativity": 6
+        }
+    },
+    "commit_info": {
+        "id": "10b9cdd9e2f1695cef24218ed34bbcc2789744d1",
+        "time": "2025-08-18T20:31:32+02:00",
+        "author_time": "2025-08-18T20:30:01+02:00",
+        "dirty": true,
+        "project": "bench_playground",
+        "branch": "master"
+    },
+    "benchmarks": [
+        {
+            "group": null,
+            "name": "test_rbf[50-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cpu-numpy]",
+            "params": {
+                "N": 50,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "50-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0035550308000529187,
+                "max": 0.0037310697202337906,
+                "mean": 0.0036103788100548886,
+                "stddev": 6.28529626950947e-05,
+                "rounds": 7,
+                "median": 0.003583371770218946,
+                "iqr": 7.776815473334829e-05,
+                "q1": 0.003564819717576029,
+                "q3": 0.003642587872309377,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.0035550308000529187,
+                "hd15iqr": 0.0037310697202337906,
+                "ops": 276.97924583841575,
+                "total": 0.02527265167038422,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cpu-jax.numpy]",
+            "params": {
+                "N": 50,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "50-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.007016778470133431,
+                "max": 0.00809743840014562,
+                "mean": 0.007621245524496771,
+                "stddev": 0.000465836918486631,
+                "rounds": 7,
+                "median": 0.007769970160443336,
+                "iqr": 0.0008693610501359214,
+                "q1": 0.0071585813301499,
+                "q3": 0.008027942380285822,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.007016778470133431,
+                "hd15iqr": 0.00809743840014562,
+                "ops": 131.21214856360763,
+                "total": 0.0533487186714774,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[50-cpu-torch]",
+            "params": {
+                "N": 50,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/torch/__init__.py'>]"
+            },
+            "param": "50-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.02106169080361724,
+                "max": 0.021955910499673336,
+                "mean": 0.021508867858792656,
+                "stddev": 0.00026488305119154367,
+                "rounds": 10,
+                "median": 0.02149848954868503,
+                "iqr": 0.00018716520280577173,
+                "q1": 0.021349771099630745,
+                "q3": 0.021536936302436516,
+                "iqr_outliers": 3,
+                "stddev_outliers": 3,
+                "outliers": "3;3",
+                "ld15iqr": 0.021274763194378467,
+                "hd15iqr": 0.02189499919768423,
+                "ops": 46.49245169783345,
+                "total": 0.21508867858792655,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cpu-numpy]",
+            "params": {
+                "N": 100,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "100-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.015336437354562804,
+                "max": 0.016854574142988504,
+                "mean": 0.01597031767804375,
+                "stddev": 0.0006085215546163036,
+                "rounds": 10,
+                "median": 0.015737134965352846,
+                "iqr": 0.0011906119969873029,
+                "q1": 0.015465215642637174,
+                "q3": 0.016655827639624476,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.015336437354562804,
+                "hd15iqr": 0.016854574142988504,
+                "ops": 62.61616206763476,
+                "total": 0.15970317678043752,
+                "iterations": 14
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cpu-jax.numpy]",
+            "params": {
+                "N": 100,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "100-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.030479990504682065,
+                "max": 0.033351441501872615,
+                "mean": 0.031412426271708684,
+                "stddev": 0.0009861578157804298,
+                "rounds": 7,
+                "median": 0.0311439873999916,
+                "iqr": 0.001032468627090572,
+                "q1": 0.030803008223301728,
+                "q3": 0.0318354768503923,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.030479990504682065,
+                "hd15iqr": 0.033351441501872615,
+                "ops": 31.8345355226712,
+                "total": 0.21988698390196076,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[100-cpu-torch]",
+            "params": {
+                "N": 100,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/torch/__init__.py'>]"
+            },
+            "param": "100-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.09612536630011163,
+                "max": 0.12842464960413053,
+                "mean": 0.11858082597276993,
+                "stddev": 0.010315467545071197,
+                "rounds": 7,
+                "median": 0.12052381820394657,
+                "iqr": 0.0023742399760521976,
+                "q1": 0.12008757937437622,
+                "q3": 0.12246181935042842,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.12004321879940108,
+                "hd15iqr": 0.12842464960413053,
+                "ops": 8.43306657544815,
+                "total": 0.8300657818093896,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cpu-numpy]",
+            "params": {
+                "N": 200,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "200-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.07743432159768418,
+                "max": 0.07819761239807121,
+                "mean": 0.0776071722561028,
+                "stddev": 0.00027647682428187843,
+                "rounds": 7,
+                "median": 0.07745182309881785,
+                "iqr": 0.0002091884773108149,
+                "q1": 0.07744270624825732,
+                "q3": 0.07765189472556813,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.07743432159768418,
+                "hd15iqr": 0.07819761239807121,
+                "ops": 12.885406991766319,
+                "total": 0.5432502057927195,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cpu-jax.numpy]",
+            "params": {
+                "N": 200,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "200-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.11102144169854,
+                "max": 0.11893122210167348,
+                "mean": 0.11664177392875509,
+                "stddev": 0.0029425435291693123,
+                "rounds": 7,
+                "median": 0.11813645199872554,
+                "iqr": 0.003390019625658172,
+                "q1": 0.1150078022503294,
+                "q3": 0.11839782187598757,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.11102144169854,
+                "hd15iqr": 0.11893122210167348,
+                "ops": 8.573257815941663,
+                "total": 0.8164924175012856,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[200-cpu-torch]",
+            "params": {
+                "N": 200,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/torch/__init__.py'>]"
+            },
+            "param": "200-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.46649951103609055,
+                "max": 0.48895822203485295,
+                "mean": 0.4743248717194157,
+                "stddev": 0.007394827556307001,
+                "rounds": 7,
+                "median": 0.4723733849823475,
+                "iqr": 0.007125872987671755,
+                "q1": 0.4695603014988592,
+                "q3": 0.47668617448653094,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.46649951103609055,
+                "hd15iqr": 0.48895822203485295,
+                "ops": 2.1082596752201193,
+                "total": 3.32027410203591,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cpu-numpy]",
+            "params": {
+                "N": 500,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "500-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.48085265199188143,
+                "max": 0.49318255798425525,
+                "mean": 0.48676686114465284,
+                "stddev": 0.005225291340370449,
+                "rounds": 7,
+                "median": 0.48653171001933515,
+                "iqr": 0.010228406536043622,
+                "q1": 0.48164471723430324,
+                "q3": 0.49187312377034687,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.48085265199188143,
+                "hd15iqr": 0.49318255798425525,
+                "ops": 2.0543715684515944,
+                "total": 3.40736802801257,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cpu-jax.numpy]",
+            "params": {
+                "N": 500,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "500-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.710103732009884,
+                "max": 0.7564953670371324,
+                "mean": 0.7349918361370718,
+                "stddev": 0.018064133464038765,
+                "rounds": 7,
+                "median": 0.7400194079964422,
+                "iqr": 0.032006010980694555,
+                "q1": 0.7188482859928627,
+                "q3": 0.7508542969735572,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.710103732009884,
+                "hd15iqr": 0.7564953670371324,
+                "ops": 1.3605593298229584,
+                "total": 5.1449428529595025,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[500-cpu-torch]",
+            "params": {
+                "N": 500,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/torch/__init__.py'>]"
+            },
+            "param": "500-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 2.9156640869914554,
+                "max": 2.9606529130251147,
+                "mean": 2.9300369692833295,
+                "stddev": 0.01625917589952506,
+                "rounds": 7,
+                "median": 2.922806810005568,
+                "iqr": 0.019677020725794137,
+                "q1": 2.919694305761368,
+                "q3": 2.939371326487162,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 2.9156640869914554,
+                "hd15iqr": 2.9606529130251147,
+                "ops": 0.3412926220670159,
+                "total": 20.510258784983307,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cpu-numpy]",
+            "params": {
+                "N": 1000,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "1000-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 1.9436544830095954,
+                "max": 1.9693698899936862,
+                "mean": 1.9518368520075455,
+                "stddev": 0.009767914810381194,
+                "rounds": 7,
+                "median": 1.9463277190225199,
+                "iqr": 0.013632881513331085,
+                "q1": 1.9450288849911885,
+                "q3": 1.9586617665045196,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 1.9436544830095954,
+                "hd15iqr": 1.9693698899936862,
+                "ops": 0.5123379031251809,
+                "total": 13.662857964052819,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cpu-jax.numpy]",
+            "params": {
+                "N": 1000,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "1000-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 2.7487477049580775,
+                "max": 3.015894670970738,
+                "mean": 2.8598275245583085,
+                "stddev": 0.09465426178710139,
+                "rounds": 7,
+                "median": 2.866142528015189,
+                "iqr": 0.14098757901228964,
+                "q1": 2.7711474004900083,
+                "q3": 2.912134979502298,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 2.7487477049580775,
+                "hd15iqr": 3.015894670970738,
+                "ops": 0.349671436970468,
+                "total": 20.01879267190816,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cpu-torch]",
+            "params": {
+                "N": 1000,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/br/miniforge3/envs/scipy-dev/lib/python3.12/site-packages/torch/__init__.py'>]"
+            },
+            "param": "1000-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "gonzales",
+                "env_vars": {
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 11.072540394961834,
+                "max": 11.195131150016095,
+                "mean": 11.127312643553264,
+                "stddev": 0.04368285857668227,
+                "rounds": 7,
+                "median": 11.126549324952066,
+                "iqr": 0.0679943847208051,
+                "q1": 11.092032040498452,
+                "q3": 11.160026425219257,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 11.072540394961834,
+                "hd15iqr": 11.195131150016095,
+                "ops": 0.08986895866356029,
+                "total": 77.89118850487284,
+                "iterations": 1
+            }
+        }
+    ],
+    "datetime": "2025-08-20T11:11:30.650464+00:00",
+    "version": "5.1.0"
+}
