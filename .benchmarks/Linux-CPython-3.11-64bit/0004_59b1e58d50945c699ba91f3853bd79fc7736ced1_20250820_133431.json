@@ -1,0 +1,1703 @@
+{
+    "machine_info": {
+        "node": "qgpu3",
+        "processor": "x86_64",
+        "machine": "x86_64",
+        "python_compiler": "GCC 11.3.0",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.11.0",
+        "python_version": "3.11.0",
+        "python_build": [
+            "main",
+            "Jan 14 2023 12:27:40"
+        ],
+        "release": "6.8.0-71-generic",
+        "system": "Linux",
+        "cpu": {
+            "python_version": "3.11.0.final.0 (64 bit)",
+            "cpuinfo_version": [
+                9,
+                0,
+                0
+            ],
+            "cpuinfo_version_string": "9.0.0",
+            "arch": "X86_64",
+            "bits": 64,
+            "count": 64,
+            "arch_string_raw": "x86_64",
+            "vendor_id_raw": "AuthenticAMD",
+            "brand_raw": "AMD Ryzen Threadripper 3970X 32-Core Processor",
+            "hz_advertised_friendly": "4.2156 GHz",
+            "hz_actual_friendly": "4.2156 GHz",
+            "hz_advertised": [
+                4215631000,
+                0
+            ],
+            "hz_actual": [
+                4215631000,
+                0
+            ],
+            "model": 49,
+            "family": 23,
+            "flags": [
+                "3dnowext",
+                "3dnowprefetch",
+                "abm",
+                "adx",
+                "aes",
+                "amd_ppin",
+                "aperfmperf",
+                "apic",
+                "arat",
+                "avic",
+                "avx",
+                "avx2",
+                "bmi1",
+                "bmi2",
+                "bpext",
+                "cat_l3",
+                "cdp_l3",
+                "clflush",
+                "clflushopt",
+                "clwb",
+                "clzero",
+                "cmov",
+                "cmp_legacy",
+                "constant_tsc",
+                "cpb",
+                "cpuid",
+                "cqm",
+                "cqm_llc",
+                "cqm_mbm_local",
+                "cqm_mbm_total",
+                "cqm_occup_llc",
+                "cr8_legacy",
+                "cx16",
+                "cx8",
+                "dbx",
+                "de",
+                "decodeassists",
+                "extapic",
+                "extd_apicid",
+                "f16c",
+                "flushbyasid",
+                "fma",
+                "fpu",
+                "fsgsbase",
+                "fxsr",
+                "fxsr_opt",
+                "ht",
+                "hw_pstate",
+                "ibpb",
+                "ibs",
+                "irperf",
+                "lahf_lm",
+                "lbrv",
+                "lm",
+                "mba",
+                "mca",
+                "mce",
+                "misalignsse",
+                "mmx",
+                "mmxext",
+                "monitor",
+                "movbe",
+                "msr",
+                "mtrr",
+                "mwaitx",
+                "nonstop_tsc",
+                "nopl",
+                "npt",
+                "nrip_save",
+                "nx",
+                "osvw",
+                "osxsave",
+                "overflow_recov",
+                "pae",
+                "pat",
+                "pausefilter",
+                "pci_l2i",
+                "pclmulqdq",
+                "pdpe1gb",
+                "perfctr_core",
+                "perfctr_llc",
+                "perfctr_nb",
+                "pfthreshold",
+                "pge",
+                "pni",
+                "popcnt",
+                "pqe",
+                "pqm",
+                "pse",
+                "pse36",
+                "rapl",
+                "rdpid",
+                "rdpru",
+                "rdrand",
+                "rdrnd",
+                "rdseed",
+                "rdt_a",
+                "rdtscp",
+                "rep_good",
+                "sep",
+                "sev",
+                "sev_es",
+                "sha",
+                "sha_ni",
+                "skinit",
+                "smap",
+                "smca",
+                "smep",
+                "ssbd",
+                "sse",
+                "sse2",
+                "sse4_1",
+                "sse4_2",
+                "sse4a",
+                "ssse3",
+                "stibp",
+                "succor",
+                "svm",
+                "svm_lock",
+                "syscall",
+                "tce",
+                "topoext",
+                "tsc",
+                "tsc_scale",
+                "umip",
+                "v_spec_ctrl",
+                "v_vmsave_vmload",
+                "vgif",
+                "vmcb_clean",
+                "vme",
+                "vmmcall",
+                "wbnoinvd",
+                "wdt",
+                "xgetbv1",
+                "xsave",
+                "xsavec",
+                "xsaveerptr",
+                "xsaveopt",
+                "xsaves"
+            ],
+            "l3_cache_size": 524288,
+            "l2_cache_size": 16777216,
+            "l1_data_cache_size": 1048576,
+            "l1_instruction_cache_size": 1048576,
+            "l2_cache_line_size": 512,
+            "l2_cache_associativity": 6
+        }
+    },
+    "commit_info": {
+        "id": "59b1e58d50945c699ba91f3853bd79fc7736ced1",
+        "time": "2025-08-20T12:58:54+00:00",
+        "author_time": "2025-08-20T12:58:54+00:00",
+        "dirty": false,
+        "project": "bench_playground",
+        "branch": "master"
+    },
+    "benchmarks": [
+        {
+            "group": null,
+            "name": "test_rbf[50-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cpu-numpy]",
+            "params": {
+                "N": 50,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "50-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.003029207270592451,
+                "max": 0.0030326633085496725,
+                "mean": 0.0030302771676464805,
+                "stddev": 1.1541434485519736e-06,
+                "rounds": 7,
+                "median": 0.0030299018789082767,
+                "iqr": 9.735999628897318e-07,
+                "q1": 0.0030295850039692594,
+                "q3": 0.003030558603932149,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.003029207270592451,
+                "hd15iqr": 0.0030326633085496725,
+                "ops": 330.00281646733595,
+                "total": 0.021211940173525363,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cpu-jax.numpy]",
+            "params": {
+                "N": 50,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "50-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.003636035539675504,
+                "max": 0.004375035411212594,
+                "mean": 0.003910780206788331,
+                "stddev": 0.00030983605635284385,
+                "rounds": 7,
+                "median": 0.003733866938855499,
+                "iqr": 0.0004798243253026158,
+                "q1": 0.0037312074238434433,
+                "q3": 0.004211031749146059,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.003636035539675504,
+                "hd15iqr": 0.004375035411212594,
+                "ops": 255.7034522840737,
+                "total": 0.02737546144751832,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[50-cpu-torch]",
+            "params": {
+                "N": 50,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "50-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.029957192786969244,
+                "max": 0.030433264491148294,
+                "mean": 0.030229301358174,
+                "stddev": 0.00016683548193590213,
+                "rounds": 7,
+                "median": 0.030232836212962865,
+                "iqr": 0.0002470541861839641,
+                "q1": 0.030112431431189177,
+                "q3": 0.03035948561737314,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.029957192786969244,
+                "hd15iqr": 0.030433264491148294,
+                "ops": 33.080486649407796,
+                "total": 0.211605109507218,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cuda-jax.numpy]",
+            "params": {
+                "N": 50,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "50-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.003024422540329397,
+                "max": 0.0030511670582927765,
+                "mean": 0.0030379191686266236,
+                "stddev": 1.1573209991757826e-05,
+                "rounds": 7,
+                "median": 0.0030422660522162913,
+                "iqr": 2.2246217704378034e-05,
+                "q1": 0.003025795674766414,
+                "q3": 0.003048041892470792,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.003024422540329397,
+                "hd15iqr": 0.0030511670582927765,
+                "ops": 329.1726818564689,
+                "total": 0.021265434180386365,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[50-cuda-torch]",
+            "params": {
+                "N": 50,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "50-cuda-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.00033267176104709507,
+                "max": 0.0003333388289902359,
+                "mean": 0.00033300436913434947,
+                "stddev": 3.0230248207188107e-07,
+                "rounds": 7,
+                "median": 0.00033299814513884483,
+                "iqr": 5.911702755839244e-07,
+                "q1": 0.0003327161084162071,
+                "q3": 0.000333307278691791,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.00033267176104709507,
+                "hd15iqr": 0.0003333388289902359,
+                "ops": 3002.96360254827,
+                "total": 0.0023310305839404463,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[50-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[50-cuda-cupy]",
+            "params": {
+                "N": 50,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "50-cuda-cupy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0023662446392700076,
+                "max": 0.002367084959987551,
+                "mean": 0.002366708006916775,
+                "stddev": 2.709512071092337e-07,
+                "rounds": 9,
+                "median": 0.0023666573502123356,
+                "iqr": 3.735028440135166e-07,
+                "q1": 0.0023665388009976593,
+                "q3": 0.002366912303841673,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0023662446392700076,
+                "hd15iqr": 0.002367084959987551,
+                "ops": 422.5278306734376,
+                "total": 0.021300372062250973,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cpu-numpy]",
+            "params": {
+                "N": 100,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "100-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.012141714584739768,
+                "max": 0.012167989002431141,
+                "mean": 0.012154276196516173,
+                "stddev": 8.838182080935191e-06,
+                "rounds": 10,
+                "median": 0.012152372325277504,
+                "iqr": 1.021593754344137e-05,
+                "q1": 0.012150718227905385,
+                "q3": 0.012160934165448826,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.012141714584739768,
+                "hd15iqr": 0.012167989002431141,
+                "ops": 82.27556983497165,
+                "total": 0.12154276196516173,
+                "iterations": 17
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cpu-jax.numpy]",
+            "params": {
+                "N": 100,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "100-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.03542418850120157,
+                "max": 0.03560706570278853,
+                "mean": 0.03551206227525004,
+                "stddev": 5.542906319184672e-05,
+                "rounds": 7,
+                "median": 0.035520682600326835,
+                "iqr": 4.12287248764201e-05,
+                "q1": 0.03548413125099614,
+                "q3": 0.03552535997587256,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.03542418850120157,
+                "hd15iqr": 0.03560706570278853,
+                "ops": 28.159446000322685,
+                "total": 0.2485844359267503,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[100-cpu-torch]",
+            "params": {
+                "N": 100,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "100-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.12123382848221809,
+                "max": 0.12361003248952329,
+                "mean": 0.12211780327682693,
+                "stddev": 0.0008810727137628191,
+                "rounds": 9,
+                "median": 0.12162280851043761,
+                "iqr": 0.0015469553763978183,
+                "q1": 0.12131612325902097,
+                "q3": 0.12286307863541879,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.12123382848221809,
+                "hd15iqr": 0.12361003248952329,
+                "ops": 8.188814187339382,
+                "total": 1.0990602294914424,
+                "iterations": 2
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cuda-jax.numpy]",
+            "params": {
+                "N": 100,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "100-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.008467430660966785,
+                "max": 0.008514388310723008,
+                "mean": 0.008485100684754018,
+                "stddev": 1.635566410028841e-05,
+                "rounds": 7,
+                "median": 0.008483246450778097,
+                "iqr": 2.1536952699534664e-05,
+                "q1": 0.008470883629634045,
+                "q3": 0.00849242058233358,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.008467430660966785,
+                "hd15iqr": 0.008514388310723008,
+                "ops": 117.85363982737346,
+                "total": 0.05939570479327813,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[100-cuda-torch]",
+            "params": {
+                "N": 100,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "100-cuda-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0010899908640725619,
+                "max": 0.0010909863643894862,
+                "mean": 0.0010905699744952193,
+                "stddev": 3.246841349853364e-07,
+                "rounds": 10,
+                "median": 0.0010905147830034484,
+                "iqr": 4.1897241633546446e-07,
+                "q1": 0.0010904384784542185,
+                "q3": 0.001090857450870554,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0010899908640725619,
+                "hd15iqr": 0.0010909863643894862,
+                "ops": 916.9517072601045,
+                "total": 0.010905699744952193,
+                "iterations": 184
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[100-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[100-cuda-cupy]",
+            "params": {
+                "N": 100,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "100-cuda-cupy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.009160296840127558,
+                "max": 0.00916198045015335,
+                "mean": 0.009161084898348366,
+                "stddev": 5.661681683670291e-07,
+                "rounds": 7,
+                "median": 0.009161146928090603,
+                "iqr": 7.652363274227025e-07,
+                "q1": 0.009160677082836629,
+                "q3": 0.009161442319164052,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.009160296840127558,
+                "hd15iqr": 0.00916198045015335,
+                "ops": 109.15737722071411,
+                "total": 0.06412759428843856,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cpu-numpy]",
+            "params": {
+                "N": 200,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "200-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.0484993021003902,
+                "max": 0.048564682994037864,
+                "mean": 0.04853241280985198,
+                "stddev": 2.189267074885461e-05,
+                "rounds": 7,
+                "median": 0.048526451387442646,
+                "iqr": 2.7236004825681448e-05,
+                "q1": 0.04852296047029086,
+                "q3": 0.04855019647511654,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0484993021003902,
+                "hd15iqr": 0.048564682994037864,
+                "ops": 20.604786411876105,
+                "total": 0.33972688966896386,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cpu-jax.numpy]",
+            "params": {
+                "N": 200,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "200-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.14134909550193697,
+                "max": 0.14217429049313068,
+                "mean": 0.14175076904939488,
+                "stddev": 0.000253753191659294,
+                "rounds": 8,
+                "median": 0.1417618080158718,
+                "iqr": 0.0003298537340015173,
+                "q1": 0.14157486072508618,
+                "q3": 0.1419047144590877,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.14134909550193697,
+                "hd15iqr": 0.14217429049313068,
+                "ops": 7.0546354471737445,
+                "total": 1.134006152395159,
+                "iterations": 2
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[200-cpu-torch]",
+            "params": {
+                "N": 200,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "200-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.48405145294964314,
+                "max": 0.49247755599208176,
+                "mean": 0.48805424654191093,
+                "stddev": 0.0028951440954307975,
+                "rounds": 7,
+                "median": 0.4886769810691476,
+                "iqr": 0.004168285406194627,
+                "q1": 0.4857682970468886,
+                "q3": 0.48993658245308325,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.48405145294964314,
+                "hd15iqr": 0.49247755599208176,
+                "ops": 2.0489525643623847,
+                "total": 3.4163797257933766,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cuda-jax.numpy]",
+            "params": {
+                "N": 200,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "200-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.020613374002277852,
+                "max": 0.020754119800403713,
+                "mean": 0.020676788697019218,
+                "stddev": 4.554145088508598e-05,
+                "rounds": 10,
+                "median": 0.020684143342077733,
+                "iqr": 7.846199441701243e-05,
+                "q1": 0.02062695720233023,
+                "q3": 0.020705419196747243,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.020613374002277852,
+                "hd15iqr": 0.020754119800403713,
+                "ops": 48.36340955325238,
+                "total": 0.20676788697019216,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[200-cuda-torch]",
+            "params": {
+                "N": 200,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "200-cuda-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.003885681121610105,
+                "max": 0.003889334669802338,
+                "mean": 0.0038869320544680317,
+                "stddev": 1.225816392530747e-06,
+                "rounds": 7,
+                "median": 0.003886765339411795,
+                "iqr": 1.2244412209835506e-06,
+                "q1": 0.003886069155414589,
+                "q3": 0.0038872935966355725,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.003885681121610105,
+                "hd15iqr": 0.003889334669802338,
+                "ops": 257.27231296736954,
+                "total": 0.02720852438127622,
+                "iterations": 100
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[200-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[200-cuda-cupy]",
+            "params": {
+                "N": 200,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "200-cuda-cupy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.036282709008082746,
+                "max": 0.03628680009860545,
+                "mean": 0.0362844272716237,
+                "stddev": 1.217809038294216e-06,
+                "rounds": 7,
+                "median": 0.03628437099978328,
+                "iqr": 5.046662408803027e-07,
+                "q1": 0.036284000240266324,
+                "q3": 0.036284504906507205,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.03628394599072635,
+                "hd15iqr": 0.03628680009860545,
+                "ops": 27.560032641938708,
+                "total": 0.25399099090136584,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cpu-numpy]",
+            "params": {
+                "N": 500,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "500-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.3030431920196861,
+                "max": 0.3032432540785521,
+                "mean": 0.30311756304997417,
+                "stddev": 7.590896812573026e-05,
+                "rounds": 7,
+                "median": 0.3030850531067699,
+                "iqr": 0.0001192125491797924,
+                "q1": 0.30305297300219536,
+                "q3": 0.30317218555137515,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.3030431920196861,
+                "hd15iqr": 0.3032432540785521,
+                "ops": 3.2990500119425037,
+                "total": 2.1218229413498193,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cpu-jax.numpy]",
+            "params": {
+                "N": 500,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "500-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.9296471420675516,
+                "max": 0.9308940579649061,
+                "mean": 0.9304803474141019,
+                "stddev": 0.0005177185931138723,
+                "rounds": 7,
+                "median": 0.9307877181563526,
+                "iqr": 0.0008498398819938302,
+                "q1": 0.930022370244842,
+                "q3": 0.9308722101268359,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.9296471420675516,
+                "hd15iqr": 0.9308940579649061,
+                "ops": 1.0747137247757035,
+                "total": 6.513362431898713,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[500-cpu-torch]",
+            "params": {
+                "N": 500,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "500-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 3.0238307379186153,
+                "max": 3.0518456830177456,
+                "mean": 3.0358596257532815,
+                "stddev": 0.010432928286339937,
+                "rounds": 7,
+                "median": 3.0320860219653696,
+                "iqr": 0.016519106284249574,
+                "q1": 3.0269057925324887,
+                "q3": 3.0434248988167383,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 3.0238307379186153,
+                "hd15iqr": 3.0518456830177456,
+                "ops": 0.32939599430651284,
+                "total": 21.25101738027297,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cuda-jax.numpy]",
+            "params": {
+                "N": 500,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "500-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.10467227408662438,
+                "max": 0.10589815850835294,
+                "mean": 0.10512029303936288,
+                "stddev": 0.0003408608172721528,
+                "rounds": 10,
+                "median": 0.1050865437136963,
+                "iqr": 0.00016976206097751856,
+                "q1": 0.10503719293046743,
+                "q3": 0.10520695499144495,
+                "iqr_outliers": 3,
+                "stddev_outliers": 3,
+                "outliers": "3;3",
+                "ld15iqr": 0.10503719293046743,
+                "hd15iqr": 0.10589815850835294,
+                "ops": 9.512911076318485,
+                "total": 1.0512029303936288,
+                "iterations": 2
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[500-cuda-torch]",
+            "params": {
+                "N": 500,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "500-cuda-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.023507311195135116,
+                "max": 0.023652680893428625,
+                "mean": 0.023575155662062267,
+                "stddev": 6.044432262776721e-05,
+                "rounds": 9,
+                "median": 0.023615503404289483,
+                "iqr": 0.0001097798929549712,
+                "q1": 0.02351036519976333,
+                "q3": 0.0236201450927183,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.023507311195135116,
+                "hd15iqr": 0.023652680893428625,
+                "ops": 42.417535406106566,
+                "total": 0.2121764009585604,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[500-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[500-cuda-cupy]",
+            "params": {
+                "N": 500,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "500-cuda-cupy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.22614059294573963,
+                "max": 0.2261618529446423,
+                "mean": 0.22615023208264676,
+                "stddev": 7.427547158739709e-06,
+                "rounds": 9,
+                "median": 0.2261505031492561,
+                "iqr": 1.2942415196448565e-05,
+                "q1": 0.22614397312281653,
+                "q3": 0.22615691553801298,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.22614059294573963,
+                "hd15iqr": 0.2261618529446423,
+                "ops": 4.4218393710714805,
+                "total": 2.035352088743821,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cpu-numpy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cpu-numpy]",
+            "params": {
+                "N": 1000,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/numpy/__init__.py'>]"
+            },
+            "param": "1000-cpu-numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 1.2554106859024614,
+                "max": 1.2559868548996747,
+                "mean": 1.255639308564631,
+                "stddev": 0.00021110050087831848,
+                "rounds": 7,
+                "median": 1.2555507600773126,
+                "iqr": 0.00030044798040762544,
+                "q1": 1.255478857900016,
+                "q3": 1.2557793058804236,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 1.2554106859024614,
+                "hd15iqr": 1.2559868548996747,
+                "ops": 0.7964070519129717,
+                "total": 8.789475159952417,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cpu-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cpu-jax.numpy]",
+            "params": {
+                "N": 1000,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "1000-cpu-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 3.682823073817417,
+                "max": 3.687165210954845,
+                "mean": 3.683962697263009,
+                "stddev": 0.0014745747811683659,
+                "rounds": 7,
+                "median": 3.683631874155253,
+                "iqr": 0.0008344060042873025,
+                "q1": 3.6830450604320504,
+                "q3": 3.6838794664363377,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 3.682823073817417,
+                "hd15iqr": 3.687165210954845,
+                "ops": 0.2714468310829932,
+                "total": 25.78773888084106,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cpu-torch]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cpu-torch]",
+            "params": {
+                "N": 1000,
+                "device": "cpu",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "1000-cpu-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 10.149838140932843,
+                "max": 10.220321808941662,
+                "mean": 10.2012006284536,
+                "stddev": 0.025620750529433564,
+                "rounds": 7,
+                "median": 10.210877191042528,
+                "iqr": 0.028423350071534514,
+                "q1": 10.190688696806319,
+                "q3": 10.219112046877854,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 10.149838140932843,
+                "hd15iqr": 10.220321808941662,
+                "ops": 0.0980276769786058,
+                "total": 71.4084043991752,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cuda-jax.numpy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cuda-jax.numpy]",
+            "params": {
+                "N": 1000,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'jax.numpy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/jax/numpy/__init__.py'>]"
+            },
+            "param": "1000-cuda-jax.numpy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.20239876792766154,
+                "max": 0.20456760399974883,
+                "mean": 0.2032609896035865,
+                "stddev": 0.0006961536941178113,
+                "rounds": 10,
+                "median": 0.20322131249122322,
+                "iqr": 0.0010767728090286255,
+                "q1": 0.20261108106933534,
+                "q3": 0.20368785387836397,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.20239876792766154,
+                "hd15iqr": 0.20456760399974883,
+                "ops": 4.919783190814275,
+                "total": 2.032609896035865,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cuda-torch]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cuda-torch]",
+            "params": {
+                "N": 1000,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'torch' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/torch/__init__.py'>]"
+            },
+            "param": "1000-cuda-torch",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.09188079559244215,
+                "max": 0.09190146890468895,
+                "mean": 0.09188973313929247,
+                "stddev": 6.5437989070133665e-06,
+                "rounds": 7,
+                "median": 0.09188782568089664,
+                "iqr": 6.317364750429988e-06,
+                "q1": 0.09188681241357698,
+                "q3": 0.0918931297783274,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.09188079559244215,
+                "hd15iqr": 0.09190146890468895,
+                "ops": 10.882608598766247,
+                "total": 0.6432281319750474,
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_rbf[1000-cuda-cupy]",
+            "fullname": "rbf_bench.py::test_rbf[1000-cuda-cupy]",
+            "params": {
+                "N": 1000,
+                "device": "cuda",
+                "xp": "UNSERIALIZABLE[<module 'cupy' from '/home/ev-br/.conda/envs/scipy-dev/lib/python3.11/site-packages/cupy/__init__.py'>]"
+            },
+            "param": "1000-cuda-cupy",
+            "extra_info": {
+                "jit": "eager",
+                "machine": "qgpu3",
+                "env_vars": {
+                    "MKL_NUM_THREADS": "1",
+                    "OPENBLAS_NUM_THREADS": "1",
+                    "OPENMP_NUM_THREADS": "1",
+                    "NUMBA_NUM_THREADS": "1",
+                    "XLA_FLAGS": " --xla_force_host_platform_device_count=1 --xla_cpu_multi_thread_eigen=false intra_op_parallelism_threads=1",
+                    "SCIPY_ARRAY_API": "1"
+                }
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 7,
+                "max_time": 2.0,
+                "min_time": 0.2,
+                "warmup": 10
+            },
+            "stats": {
+                "min": 0.9094935848843306,
+                "max": 0.9095370538998395,
+                "mean": 0.9095192821363786,
+                "stddev": 1.6025299784113152e-05,
+                "rounds": 7,
+                "median": 0.9095248251687735,
+                "iqr": 2.5379122234880924e-05,
+                "q1": 0.9095076618250459,
+                "q3": 0.9095330409472808,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.9094935848843306,
+                "hd15iqr": 0.9095370538998395,
+                "ops": 1.0994819127430597,
+                "total": 6.36663497495465,
+                "iterations": 1
+            }
+        }
+    ],
+    "datetime": "2025-08-20T13:43:03.226364+00:00",
+    "version": "5.1.0"
+}
