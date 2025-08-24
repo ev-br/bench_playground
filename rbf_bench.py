@@ -70,3 +70,35 @@ def test_rbf(benchmark, xp, device, N):
 
     # benchmark
     benchmark(func, xflat)
+
+
+@pytest.mark.parametrize('N', Ns)
+def test_cupyx_rbf(benchmark, N):
+    """Benchmark 'native' cupyx.scipy.interpolate.RBFInterpolator.
+    """
+    if cupy is None:
+        pytest.skip("cupyx is not available.")
+
+    xp = cupy
+    from cupyx.scipy.interpolate import RBFInterpolator
+
+    benchmark.extra_info["machine"] = machine
+    benchmark.extra_info["env_vars"] = utils.get_env_vars()
+
+    # construct the interpolator
+    xobs, yobs = map(xp.asarray, (xobs_np, yobs_np))
+    rbf = RBFInterpolator(xobs, yobs)
+
+    # problem size dependent data
+    x1 = xp.linspace(-1, 1, N)
+    xgrid = xp.stack(xp.meshgrid(x1, x1, indexing='ij'))
+    xflat = xgrid.reshape(2, -1).T     # make it a 2-D array
+
+    # pre-compile
+    rbf(xflat)
+
+    # use xp-specific synchronization
+    func = utils.wrap_function(rbf, xp)
+
+    # benchmark
+    benchmark(func, xflat)
