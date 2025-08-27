@@ -36,7 +36,8 @@ xobs_np = 2*Halton(2, seed=rng).random(Nobs) - 1
 yobs_np = np.sum(xobs_np, axis=1)*np.exp(-6*np.sum(xobs_np**2, axis=1))
 
 
-@pytest.mark.parametrize('xp', AVAILABLE_MODULES)
+#@pytest.mark.parametrize('xp', AVAILABLE_MODULES)
+@pytest.mark.parametrize('xp', [torch])
 @pytest.mark.parametrize('device', ['cpu', 'cuda'])
 @pytest.mark.parametrize('N', Ns)
 def test_rbf(benchmark, xp, device, N):
@@ -70,3 +71,32 @@ def test_rbf(benchmark, xp, device, N):
 
     # benchmark
     benchmark(func, xflat)
+
+
+@pytest.mark.parametrize('N', Ns)
+def test_cupyx_rbf(benchmark, N):
+    """Benchmark 'native' cupyx.scipy.interpolate.RBFInterpolator.
+    """
+    if cupy is None:
+        pytest.skip("cupyx is not available.")
+
+    xp = cupy
+    from cupyx.scipy.interpolate import RBFInterpolator
+
+    benchmark.extra_info["machine"] = machine
+    benchmark.extra_info["env_vars"] = utils.get_env_vars()
+
+    # construct the interpolator
+    x1 = xp.linspace(-1, 1, N)
+    xgrid = xp.stack(xp.meshgrid(x1, x1, indexing='ij'))
+    xflat = xgrid.reshape(2, -1).T     # make it a 2-D array
+
+    # pre-compile
+    rbf(xflat)
+
+    # use xp-specific synchronization
+    func = utils.wrap_function(rbf, xp)
+
+    # benchmark
+    benchmark(func, xflat)
+
