@@ -28,7 +28,7 @@ for xp in AVAILABLE_MODULES:
 
 
 Nobs = 100
-Ns = [50, 100, 200, 500, 1000] #, 2000]
+Ns = [2000]  #[50, 100, 200, 500, 1000]
 
 # set up the data to interpolate
 rng = np.random.default_rng(123)
@@ -87,6 +87,10 @@ def test_cupyx_rbf(benchmark, N):
     benchmark.extra_info["env_vars"] = utils.get_env_vars()
 
     # construct the interpolator
+    xobs, yobs = map(xp.asarray, (xobs_np, yobs_np))
+    rbf = RBFInterpolator(xobs, yobs)
+
+    # problem size dependent data
     x1 = xp.linspace(-1, 1, N)
     xgrid = xp.stack(xp.meshgrid(x1, x1, indexing='ij'))
     xflat = xgrid.reshape(2, -1).T     # make it a 2-D array
@@ -99,4 +103,3 @@ def test_cupyx_rbf(benchmark, N):
 
     # benchmark
     benchmark(func, xflat)
-
