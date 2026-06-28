@@ -28,7 +28,7 @@ for xp in AVAILABLE_MODULES:
 
 
 Nobs = 100
-Ns = [50, 100, 200, 500, 1000] #, 2000]
+Ns = [2000]  #[50, 100, 200, 500, 1000]
 
 # set up the data to interpolate
 rng = np.random.default_rng(123)
